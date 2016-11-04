@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iPad</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="bootstap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/head-tail.css">
+    <style>
+        /*导航栏*/
+        .box1{
+            background-color: #000000;
+            height: 45px;
+            text-decoration: none;
+        }
+        .box1 ul{
+            padding: 0;
+            margin: 0;
+        }
+        .box1 ul li{
+            height: 45px;
+            float: left;
+            list-style: none;
+        }
+        .box1 ul li a{
+            display: block;
+            height: 100px;
+            text-align: center;
+            color: #ffffff;
+            line-height: 45px;
+            font-size: 16px;
+            font-weight: 100;
+            text-decoration: none;
+        }
+        .box1 ul li a:hover{
+            color: #6e6a66;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*导航栏样式设置开始*/
+        .nav-items{
+            width: 100%;
+            height: 110px;
+            background-color: #f6f6f6;
+        }
+        .nav-items ul{
+            height: 110px;
+        }
+        .nav-items ul li{
+            list-style: none;
+            float: left;
+            margin-right: 30px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .nav-items ul li a {
+            font-size: 12px;
+            text-decoration: none;
+            color: black;
+        }
+        /*中部样式设置开始*/
+        /*iPad pro 样式设置*/
+        .mian .ipad_pro{
+            margin-top: 50px;
+        }
+        .mian .ipad_pro .content{
+            margin-bottom: 80px;
+        }
+        .mian .ipad_pro .content{
+            text-align: center;
+        }
+        .mian .ipad_pro .content h1{
+            font-size: 64px;
+            font-family: "songti";
+            font-weight: 400;
+        }
+        .mian .ipad_pro .content p{
+            font-size: 32px;
+        }
+        .mian .ipad_pro .content a{
+            font-size: 22px;
+            text-decoration: none;
+
+        }
+        /*apple pencil 样式设置*/
+        .apple_pen{
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: #fafafa;
+        }
+        .apple_pen .content{
+            position: absolute;
+            top:0;
+            left: 300px;
+            z-index: 1;
+        }
+        .apple_pen .content h1{
+            font-size: 64px;
+            font-family: "songti";
+            font-weight: 400;
+        }
+        .apple_pen .content p{
+            font-size: 32px;
+        }
+        .apple_pen .content a{
+            font-size: 22px;
+            text-decoration: none;
+        }
+        /*smart keyboard 样式设置*/
+        .keyboard .keyboard_content h1{
+            font-size: 64px;
+            font-family: "songti";
+            font-weight: 400;
+        }
+        .keyboard .keyboard_content p{
+            font-size: 32px;
+        }
+        .keyboard .keyboard_content a {
+            font-size: 22px;
+            text-decoration: none;
+        }
+        /*apps 样式设置*/
+        .apps{
+            margin-top: 100px;
+        }
+        .apps .apps_content{
+            text-align: center;
+        }
+        .apps .apps_content h2{
+            font-size: 42px;
+        }
+        .apps .apps_content p{
+            font-size: 14px;
+            line-height: 24px;
+            font-family: "Microsoft yahei";
+        }
+        .apps .apps_content a{
+            font-family: "Microsoft yahei";
+            text-decoration: none;
+        }
+        /*iPad air 样式设置*/
+        .ipad{
+            position: relative;
+            margin-top: 150px;
+        }
+        .ipad .ipad_air{
+            position: absolute;
+            top:20px;
+            left: 600px;
+            text-align: center;
+        }
+        .ipad .ipad_air h1{
+            font-size: 64px;
+            font-family: "songti";
+            font-weight: 400;
+        }
+        .ipad .ipad_air p{
+            font-size: 32px;
+        }
+        .ipad .ipad_air a{;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        /*iPad mini 样式设置*/
+        .mini .mn h1{
+            font-size: 64px;
+            font-family: "songti";
+            font-weight: 400;
+        }
+        .mini .mn p{
+            font-size: 32px;
+        }
+        .mini .mn a{
+            text-decoration: none;
+            font-size: 22px;
+        }
+        .mini .mn{
+            text-align: center;
+            margin-bottom: 50px;
+
+        }
+        .mini{
+            margin-top: 100px;
+        }
+        /*服务 样式设置*/
+        .ios{
+            
+        }
+        .ios .ios_content{
+            text-align: center;
+            line-height: 24px;
+        }
+        .ios .ios_content h2{
+            font-size: 42px;
+        }
+        .ios .ios_content p{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+        }
+        .ios .ios_content a{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            text-decoration: none;
+        }
+        /*机型不对 样式设置*/
+        .compare .compare_content{
+            text-align: center;
+            line-height: 36px;
+            margin-bottom: 80px;
+            margin-top: 80px;
+        }
+        .compare .compare_content h2{
+            font-size: 42px;
+        }
+        .compare .compare_content a{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            text-decoration: none;
+        }
+        /*店内服务 样式设置*/
+        .server{
+            margin-top: 100px;
+        }
+        .server .server_one,.server .server_two{
+            text-align: center;
+        }
+        .server .server_one h3,.server .server_two h3{
+            font-size: 24px;
+            font-family:"Microsoft yahei";
+        }
+        .server .server_one p,.server .server_two p{
+            font-size: 16px;
+            font-family:"Microsoft yahei";
+            line-height: 28px;
+
+        }
+        .server .server_one a,.server .server_two a{
+            font-size: 16px;
+            font-family:"Microsoft yahei";
+            line-height: 28px;
+            text-decoration: none;
+        }
+        /*配件 样式设置*/
+        .pj{
+            height: 800px;
+            width: 100%;
+            background: url("images/9.jpg");
+        }
+        .pj .pj_content{
+            text-align: center;
+            margin-top: 320px;
+        }
+        .pj .pj_content h2{
+            font-size: 42px;
+        }
+        .pj .pj_content p{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+        }
+        .pj .pj_content a{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            text-decoration: none;
+        }
+
+        /*尾部 样式设置*/
+        .edu{
+            height: 493px;
+            width: 100%;
+            background: url("images/10.jpg ");
+            margin-top: 10px;
+        }
+
+        .edu .edu_content{
+            text-align: center;
+            margin-top: 150px;
+        }
+        .edu .edu_content h2{
+            font-size: 42px;
+            color:white;
+        }
+        .edu .edu_content p {
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            color: white;
+        }
+        .edu .edu_content a{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            text-decoration: none;
+            color: white;
+            line-height: 36px;
+        }
+        .business{
+            height: 600px;
+            width: 100%;
+            background: url("images/11.jpg ");
+            margin-top: 10px;
+        }
+
+        .business .business_content{
+            text-align: center;
+            margin-top: 200px;
+        }
+        .business .business_content h2{
+            font-size: 42px;
+            color:white;
+        }
+        .business .business_content p {
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            color: white;
+        }
+        .business .business_content a{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            text-decoration: none;
+            color: white;
+            line-height: 36px;
+        }
+        .astore{
+            height: 600px;
+            width: 100%;
+            background: url("images/12.jpg ");
+            margin-top: 10px;
+        }
+
+        .astore .store_content{
+            text-align: center;
+            margin-top: 200px;
+        }
+        .astore .store_content h2{
+            font-size: 42px;
+            color:white;
+        }
+        .astore .store_content p {
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            color: white;
+        }
+        .astore .store_content a{
+            font-size: 16px;
+            font-family: "Microsoft yahei";
+            text-decoration: none;
+            color: white;
+            line-height: 36px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class=" box1">
+        <ul class="col-sm-12 hid" id="hid1">
+            <li class="col-sm-1 col-sm-offset-1 ac-gn-item">
+                <a href="ApChina.html">
+                    <span class="glyphicon glyphicon-bell"></span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="Mac.html">
+                    <span>Mac</span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="#">
+                    <span>IPad</span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="#">
+                    <span>IPhone</span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="#">
+                    <span>Watch</span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="#">
+                    <span>TV</span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="#">
+                    <span>Music</span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="support.html">
+                    <span>Support</span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="#">
+                    <span class="glyphicon glyphicon-search" id="search" style=""></span>
+                </a>
+            </li>
+            <li class="col-sm-1 ac-gn-item">
+                <a href="#">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--头部导航栏-->
+<div class="nav-items ">
+    <ul class="col-sm-8 col-sm-offset-3">
+        <li>
+            <a href="">
+                <figure><img src="images/1.svg" alt=""></figure>
+                <span>iPad Pro</span>
+            </a>
+        </li>
+        <li>
+            <figure><img src="images/2.svg" alt=""></figure>
+            <a href="#">iPad Air 2</a>
+        </li>
+        <li>
+            <figure><img src="images/2.svg" alt=""></figure>
+            <a href="#">iPad mini 4</a>
+        </li>
+        <li>
+            <figure><img src="images/3.svg" alt=""></figure>
+            <a href="#">iPad mini 2</a>
+        </li>
+        <li>
+            <figure><img src="images/4.svg" alt=""></figure>
+            <a href="#">ios 10</a>
+        </li>
+        <li>
+            <figure><img src="images/5.svg" alt=""></figure>
+            <a href="#">配件</a>
+        </li>
+        <li>
+            <figure><img src="images/6.svg" alt=""></figure>
+            <a href="#">机型比较</a>
+        </li>
+    </ul>
+    <!--头部导航栏结束-->
+</div>
+<!--中部内容区域-->
+<div class="mian">
+    <!--ipad pro部分-->
+    <div class="ipad_pro">
+        <div class="content col-sm-4 col-sm-offset-4">
+          <h1>iPad Pro</h1>
+            <p>你的下一台电脑<br/>
+            现更以两种尺寸呈现
+            </p>
+            <a href="#">进一步了解></a>
+            <a href="#">购买></a>
+        </div>
+        <div><img src="images/1.jpg" alt="" style="height: 577px;width: 100%;"></div>
+    </div>
+    <!--ipad pro部分-->
+    <div class="apple_pen col-sm-12">
+        <div class="content" style="text-align: center;">
+            <h1>Apple Pencil</h1>
+            <p>为iPad Pro而来</p>
+            <a href="#">进一步了解></a>
+            <a href="#">购买></a>
+        </div>
+        <div style="width: 905px;overflow: hidden;float: right;"><img src="images/2.jpg" alt=""></div>
+    </div>
+    <!--smart keyboard部分-->
+    <div class="col-sm-12 keyboard">
+        <div class="col-sm-3 col-sm-pull-2"><img src="images/3.png" alt="" ></div>
+        <div class="keyboard_content" style="text-align: center; margin-top: 150px">
+            <h1>Smart Keyboard</h1>
+            <p>为iPad Pro 而来</p>
+            <a href="#">进一步了解></a>
+            <a href="#">购买></a>
+        </div>
+    </div>
+    <!--apps部分-->
+    <div class="apps col-sm-12">
+        <div class="apps_content col-sm-6 col-sm-offset-3">
+            <h2>上百万款为iPad而来的app</h2>
+            <p>你的 iPad 内置有多款强大 app 来帮你处理各种日常事务。而 App&nbsp;Store 中更有上百万款精彩 app，均为 iPad 宽大精美的 Retina 显示屏而设计。你喜欢做的事，几乎都有相应的 iPad app 能帮到你</p>
+            <a href="#">访问 App Store></a>
+        </div>
+        <div><img src="images/04.jpg" alt="" style="height: 300px;width: 100%;"></div>
+    </div>
+    <!--iPad air部分-->
+    <div class="ipad col-sm-12">
+        <div class="col-sm-8 col-sm-pull-2"><img src="images/5.jpg" alt=""></div>
+        <div class="ipad_air">
+            <h1>iPad Air 2</h1>
+            <p>一身轻，更举重若轻</p>
+            <a href="#">进一步了解></a>
+            <a href="#">购买></a>
+        </div>
+    </div>
+    <!--iPad mini部分-->
+    <div class="mini col-sm-12">
+        <div class="mn col-sm-4 col-sm-offset-4">
+            <h1>iPad mini 4</h1>
+            <p>小身型,大有身手</p>
+            <a href="#">进一步了解></a>
+            <a href="#">购买></a>
+        </div>
+        <div class="col-sm-12" style="text-align:center;"><img src="images/6.jpg" alt=""></div>
+    </div>
+    <!--服务部分-->
+    <div class="col-sm-12 ios">
+        <div class="col-sm-6 col-sm-offset-3 ios_content">
+            <img src="images/ios10.png" alt="">
+            <h2>更个性,更强大,也更有乐趣</h2>
+            <p>在ios 10上,你喜欢做的各种事情都会变得更生动、更有趣、更富有表现力</p>
+            <a href="#">进一步了解></a>
+        </div>
+        <div style="text-align: center"><img src="images/7.png" alt=""></div>
+    </div>
+    <!--机型比对部分-->
+    <div class="col-sm-12 compare">
+        <div class="compare_content col-sm-6 col-sm-offset-3">
+            <h2>iPad 机型比较</h2>
+            <a href="#">找到适合你的iPad></a>
+        </div>
+        <div style="text-align:center;"><img src="images/8.png" alt=""></div>
+    </div>
+    <!--店内服务部分-->
+    <div class="col-sm-12 server">
+        <div class="col-sm-3 col-sm-offset-2 server_one">
+            <img src="images/11.png" alt="">
+            <h3>前往零售店</h3>
+            <p>到Apple Store 零售店亲身体验各种Apple产品,我们还将为你解答所有问题</p>
+            <a href="#">进一步了解></a>
+        </div>
+        <div class="server_two col-sm-2 col-sm-push-2">
+            <img src="images/12.png" alt="">
+            <h3>免费送货</h3>
+            <p>享受免费送货上门服务</p>
+            <a href="#">进一步了解></a>
+        </div>
+    </div>
+    <!--配件部分-->
+    <div class="col-sm-12 pj">
+        <div class="col-sm-4 col-sm-offset-4 pj_content">
+            <h2>iPad 配件</h2>
+            <p>众多出色工具,助你充分发iPad的精彩</p>
+            <a href="#">选购iPad配件></a>
+        </div>
+
+    </div>
+    <!--尾部部分-->
+    <div class="col-sm-12 edu">
+        <div class="col-sm-4 col-sm-offset-4 edu_content">
+            <h2>iPad 教育</h2>
+            <p>在课堂上大大的转变学习、授课和创造的方式</p>
+            <a href="#">进一步了解iPad教育应用></a>
+            <br/>
+            <a href="#">教育选购></a>
+        </div>
+
+    </div>
+    <div class="col-sm-12 business">
+        <div class="col-sm-4 col-sm-offset-4 business_content">
+            <h2>iPad 商务应用</h2>
+            <p>多种多样的可能性,让你的工作方式从此大不相同</p>
+            <a href="#">进一步了解iPad商务应用></a>
+            <br/>
+            <a href="#">商务选购></a>
+        </div>
+
+    </div>
+    <div class="col-sm-12 astore">
+        <div class="col-sm-4 col-sm-offset-4 store_content">
+            <h2>参与店内免费讲座,<br/>
+                发倔iPad的无限精彩
+            </h2>
+            <p>报名参加 Apple Store 零售店内的操作技巧讲座，学习基础知识，提高你的 iPad 使用技能。</p>
+            <a href="#">商务选购查找你附近的讲座></a>
+        </div>
+    </div>
+</div>
+<div class="head" style="display: none">
+    <div class="apple"></div>
+    <div class="mac"></div>
+    <div class="ipad"></div>
+    <div class="iphone"></div>
+    <div class="watch"></div>
+    <div class="music"></div>
+    <div class="technology"></div>
+    <div class="search"></div>
+    <div class="store"></div>
+</div>
+<div class="head_hidden" style="display: none">
+    <div>MacBook</div>
+    <div>
+        <ul>
+            <li>设计</li>
+            <li>无线连接</li>
+            <li>macOS</li>
+            <li>技术规格</li>
+        </ul>
+    </div>
+</div>
+<!--头部设置结束-->
+<!--尾部设置开始-->
+<div class="tail col-sm-12">
+    <div class="auto">
+        <!-- 用来写分页的东西-->
+        <div class="hidden">
+
+        </div>
+        <div class="serve">
+            <div class="ipad">> ipad</div>
+            <div class="serve_about fsz12">
+                <dl class="choose">
+                    <dt>选购及了解</dt>
+                    <dd><a href="#">Mac</a></dd>
+                    <dd><a href="#">iPad</a></dd>
+                    <dd><a href="#">iPhone</a></dd>
+                    <dd><a href="#">Watch</a></dd>
+                    <dd><a href="#">Music</a></dd>
+                    <dd><a href="#">iTune</a></dd>
+                    <dd><a href="#">iPod</a></dd>
+                    <dd><a href="#">配件</a></dd>
+                </dl>
+                <dl class="store">
+                    <dt>Apple Store商店</dt>
+                    <dd><a href="#">查找零售店</a></dd>
+                    <dd><a href="#">Genius Bar 天才吧</a></dd>
+                    <dd><a href="#">讲座和学习</a></dd>
+                    <dd><a href="#">青少年活动</a></dd>
+                    <dd><a href="#">Apple Store App</a></dd>
+                    <dd><a href="#">翻新产品</a></dd>
+                    <dd><a href="#">分期付款</a></dd>
+                    <dd><a href="#">重复使用和循环利用</a></dd>
+                    <dd><a href="#">订单状态</a></dd>
+                    <dd><a href="#">选购帮助</a></dd>
+                </dl>
+                <div class="educationandcommerce">
+                    <dl class="education">
+                        <dt>教育应用</dt>
+                        <dd><a href="#">Apple 与教育</a></dd>
+                        <dd><a href="#">高校教师选购</a></dd>
+                    </dl>
+                    <dl class="commerce">
+                        <dt>商务应用</dt>
+                        <dd><a href="#">Apple 与商务</a></dd>
+                        <dd><a href="#">商务选购</a></dd>
+                    </dl>
+                </div>
+                <div class="accountandworth">
+                    <dl class="account">
+                        <dt>账户</dt>
+                        <dd><a href="#">管理你的Apple ID</a></dd>
+                        <dd><a href="#">Apple Store 账户</a></dd>
+                        <dd><a href="#">iCloud.com</a></dd>
+                    </dl>
+                    <dl class="worth">
+                        <dt>Apple 价值观</dt>
+                        <dd><a href="#">辅助功能</a></dd>
+                        <dd><a href="#">环境责任</a></dd>
+                        <dd><a href="#">隐私</a></dd>
+                        <dd><a href="#">供应商责任</a></dd>
+                    </dl>
+                </div>
+                <dl class="about">
+                    <dt>关于Apple</dt>
+                    <dd><a href="#">Apple 资讯</a></dd>
+                    <dd><a href="#">工作机会</a></dd>
+                    <dd><a href="#">媒体资讯</a></dd>
+                    <dd><a href="#">活动</a></dd>
+                    <dd><a href="#">联系Apple</a></dd>
+                </dl>
+            </div>
+            <div class="stores">更多选购方式：前往 <a href="#">Apple Store 零售店</a>，致电400-666-8800或查找在你附近的 <a href="#">授权经销商</a>。</div>
+        </div>
+        <div class="property">
+            <div class="copy fsz12">Copyright &copy; 2016 Apple Inc.保留所有权利。</div>
+            <div class="law fsz12">
+                <ul>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">使用条款</a></li>
+                    <li><a href="#">销售政策</a></li>
+                    <li><a href="#">法律信息</a></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+            <div class="china fsz12">
+                中国
+            </div>
+        </div>
+    </div>
+</div>
+<!--尾部设置结束-->
+</body>
+</html>

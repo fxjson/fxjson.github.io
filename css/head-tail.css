@@ -1,0 +1,127 @@
+/*公共类开始*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*头部导航栏*/
+.box1{
+    background-color: #000000;
+    height: 45px;
+    text-decoration: none;
+    margin-top: 2px;
+}
+.box1 ul{
+    padding: 0;
+    margin: 0;
+}
+.box1 ul li{
+    height: 45px;
+    float: left;
+}
+.box1 ul li a{
+    display: block;
+    height: 100px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+}
+.box1 ul li a:hover{
+    color: #6e6a66;
+}
+
+
+
+.auto{
+    width: 986px;
+    margin: 0 auto;
+}
+ul li{
+    list-style: none;
+}
+.fsz12{
+    font-size: 12px;
+    font-family: "Microsoft Yahei";
+}
+
+/*公共类结束*/
+/*头部设置开始*/
+
+/*头部设置结束*/
+/*尾部设置开始*/
+.tail{
+    background: #f2f2f2;
+    height: 500px;
+}
+.tail .hidden{
+
+}
+.tail .serve{
+    border-bottom: 1px solid #ddd;
+
+}
+.tail .serve a{
+    text-decoration: none;
+}
+.tail .serve dt{
+    color: black;
+}
+.tail .serve dd a{
+    color: #999;
+}
+.tail .serve .ipad{
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+.tail .serve .serve_about{
+    overflow: hidden;
+}
+.tail .serve .serve_about .choose,
+.tail .serve .fsz12 .store,
+.tail .serve .serve_about .educationandcommerce,
+.tail .serve .serve_about .accountandworth,
+.tail .serve .serve_about .about{
+    width: 197px;
+}
+.tail .serve .serve_about .choose,
+.tail .serve .serve_about .store,
+.tail .serve .serve_about .educationandcommerce,
+.tail .serve .serve_about .accountandworth,
+.tail .serve .serve_about .about{
+    display: block;
+    float: left;
+}
+.tail .serve .stores{
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+.tail .property{
+    margin-top: 8px;
+
+}
+.tail .property div{
+    float: left;
+}
+.tail .property .copy{
+    color: #999;
+}
+.tail .property .law{
+    margin-left: 20px;
+}
+.tail .property .law li{
+    float: left;
+    width: 64px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+.tail .property .law li a{
+    text-decoration: none;
+    color:#666;
+}
+.tail .property .china{
+    float: right;
+}
+/*尾部设置结束*/
